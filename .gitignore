@@ -1,0 +1,26 @@
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+
+# Veri klasörü: hesaplar, sunucu anahtarı ve şifreli kullanıcı verileri asla depoya girmez
+backend/data/
+
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+
+# Android: imza anahtarı ve derleme çıktıları (asla depoya girmemeli)
+*.keystore
+*.jks
+keystore.properties
+local.properties
+*.apk
+# Paylaşılan Android uygulaması (imzalı, gizli bilgi içermez)
+!apk/Clario.apk
+*.aab
+mobile/release/

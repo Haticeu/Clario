@@ -1,0 +1,35 @@
+{
+  "name": "clario-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Clario — işletme verisini risk, fırsat ve öneriye çeviren karar destek API'si",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "seed": "tsx src/seed/run.ts",
+    "verify": "tsx src/scripts/verify.ts",
+    "verify:robustness": "tsx src/scripts/robustness.ts",
+    "db:reset": "tsx src/scripts/reset-db.ts",
+    "test": "node --import tsx --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "jszip": "3.10.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}
